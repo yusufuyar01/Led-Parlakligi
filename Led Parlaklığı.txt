@@ -1,0 +1,14 @@
+int led=4;//ledi 4.pine bağladık ve tanımladık.
+int parlaklik;//parlaklık değerini belirtebileceğimiz "parlaklik" değişkenini atadık.
+
+
+void setup() {
+  pinMode(led,OUTPUT);//4.pinden çıkış verdik.
+  pinMode(A0,INPUT);//A0 pinine potansiyometrenin orta kısmını bağladık.
+}
+
+void loop() {
+  parlaklik=analogRead(A0);//potansiyometreden gelen değeri parlaklık değeri olarak değiştirdik.
+  analogWrite(led,parlaklik);//ledin,potansiyometreden gelen parlaklık değerine göre parlaklığı ayarlamasını sağladık.   
+  
+}
